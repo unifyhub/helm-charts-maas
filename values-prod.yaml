@@ -1,0 +1,68 @@
+network:
+  maas_ingress:
+    mode: routed
+    interface: maas-vip
+    addr: 172.18.0.2/32
+  region_api:
+    ingress:
+      public: true
+      classes:
+        namespace: "maas"
+        cluster: "local"
+      annotations:
+        traefik.ingress.kubernetes.io/rewrite-target: "/"
+    node_port:
+      enabled: false
+
+storage:
+  syslog:
+    pvc:
+      class_name: longhorn-hdd
+      size: 5Gi
+  rackd:
+    pvc:
+      class_name: longhorn-hdd
+      size: 50Gi
+
+resources:
+  maas_region:
+    limits:
+      memory: "256Mi"
+      cpu: "500m"
+    requests:
+      memory: "128Mi"
+      cpu: "250m"
+  maas_rack:
+    limits:
+      memory: "256Mi"
+      cpu: "500m"
+    requests:
+      memory: "128Mi"
+      cpu: "250m"
+
+images:
+  tags:
+    maas_region: "quay.io/airshipit/maas-region-controller:latest"
+    maas_rack: "quay.io/airshipit/maas-rack-controller:latest"
+    db_init: "docker.io/postgres:9.5"
+
+#secrets:
+#  maas_db:
+#    admin: maas-db-admin
+#    user: maas-db-user
+#  maas_users:
+#    admin: maas-admin
+#
+#manifests:
+#  syslog_statefulset: false
+#  syslog_service: false
+#
+#maas_db:
+#  auth:
+#    admin:
+#      username: "postgres"
+#      password: "yourpassword"
+#    user:
+#      username: "maas"
+#      password: "yourpassword"
+#      database: "maasdb"

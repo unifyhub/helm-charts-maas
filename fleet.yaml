@@ -1,0 +1,14 @@
+namespace: mass
+helm:
+  chart: ./charts/mass
+  releaseName: mass
+
+targetCustomizations:
+- name: prod
+  helm:
+    releaseName: mass
+    valuesFiles:
+      - values-prod.yaml
+  clusterSelector:
+    matchLabels:
+      env: prod
