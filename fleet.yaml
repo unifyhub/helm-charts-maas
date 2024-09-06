@@ -1,4 +1,5 @@
-namespace: mass
+defaultNamespace: mass
+
 helm:
   chart: charts/maas
   releaseName: mass

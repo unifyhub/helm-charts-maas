@@ -1,4 +1,3 @@
-defaultNamespace: maas
 network:
   maas_ingress:
     mode: routed
