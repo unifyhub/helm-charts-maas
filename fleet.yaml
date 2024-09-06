@@ -1,6 +1,6 @@
 namespace: mass
 helm:
-  chart: ./charts/mass
+  chart: charts/mass
   releaseName: mass
 
 targetCustomizations:
