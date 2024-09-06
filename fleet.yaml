@@ -1,13 +1,13 @@
-defaultNamespace: mass
+defaultNamespace: maas
 
 helm:
   chart: charts/maas
-  releaseName: mass
+  releaseName: maas
 
 targetCustomizations:
 - name: prod
   helm:
-    releaseName: mass
+    releaseName: maas
     valuesFiles:
       - values-prod.yaml
   clusterSelector:
