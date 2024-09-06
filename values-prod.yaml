@@ -1,3 +1,8 @@
+labels:
+  region:
+    node_selector_key: node-role.kubernetes.io/worker
+    node_selector_value: enabled
+
 network:
   maas_ingress:
     mode: routed
