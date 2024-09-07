@@ -1,7 +1,20 @@
 labels:
+  rack:
+    node_selector_key: worker
+    node_selector_value: "true"
   region:
     node_selector_key: worker
     node_selector_value: "true"
+  ingress:
+    node_selector_key: worker
+    node_selector_value: "true"
+  syslog:
+    node_selector_key: worker
+    node_selector_value: "true"
+  test:
+    node_selector_key: worker
+    node_selector_value: "true"
+
 
 network:
   maas_ingress:
