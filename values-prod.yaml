@@ -1,7 +1,7 @@
 labels:
   region:
     node_selector_key: worker
-    node_selector_value: true
+    node_selector_value: "true"
 
 network:
   maas_ingress:
