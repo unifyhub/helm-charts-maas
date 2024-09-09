@@ -1,4 +1,9 @@
+# AAlternative install
+https://technotim.live/posts/metal-as-a-service-packer/
+
+
 # README: Adding Node Selector Labels for Proper Pod Scheduling
+
 
 ## Importance of Adding `ucp-control-plane=enabled` Label to Worker Nodes
 
