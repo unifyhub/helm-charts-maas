@@ -14,5 +14,5 @@
 
 dependencies:
   - name: helm-toolkit
-    repository: file://../deps/helm-toolkit
+    repository: git+ssh://git@github.com/unifyhub/helm-toolkit.git
     version: ">= 0.1.0"
